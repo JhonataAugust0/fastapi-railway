@@ -1,16 +1,13 @@
 #!/usr/bin/python
 import psycopg2
 from sqlalchemy import create_engine
-from database_config import config
 
 def connect_pg2_1():
   """ Connect to the PostgreSQL database server """
   print('connect_pg2_1', flush=True)
   conn = None
   try:
-    # read connection parameters
-    params = config()
-
+    
     # connect to the PostgreSQL server
     print('Connecting to the PostgreSQL database...',flush=True)
     conn = psycopg2.connect(database="railway",
