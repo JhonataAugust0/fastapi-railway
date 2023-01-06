@@ -30,7 +30,3 @@ def read_root():
     return {"conn1": con1, "conn2": con2, "conn3": con3}
   except Exception as e:
     return {'status': 'Not ok', 'message': str(e)}
-
-
-if __name__ == "__main__":
-  uvicorn.run("main:app", host="localhost", port=8000, reload=True)
